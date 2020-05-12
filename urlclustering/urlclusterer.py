@@ -65,7 +65,7 @@ def _cluster_same_signature_urls(parsed_urls, min_cluster_size):
         bestleaf = max(
             leafs,
             key=lambda x:
-                len(x['urls']) * (max_reductions - x['reductions']) ** 2
+                len(x['urls']) * (max_reductions - x['reductions']) ** 1.1
         )
         if len(bestleaf['urls']) >= min_cluster_size:
             patterns.append((bestleaf['pattern'],
